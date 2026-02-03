@@ -2,7 +2,7 @@ import Image from "next/image";
 const posts = [
   {
     id: 1,
-    title: 'Swift Fundamentals — Session 1',
+    title: 'Swift Fundamentals — Session  1',
     href: '/Session-01',
     description:
       'This class is about using Swift language fundamentals together to solve a realistic data-processing problem.',
