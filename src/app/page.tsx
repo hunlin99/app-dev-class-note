@@ -2,8 +2,8 @@ import Image from "next/image";
 const posts = [
   {
     id: 1,
-    title: 'Swift Fundamentals — Session  1',
-    href: '/Session-01',
+    title: 'Swift Fundamentals — Session 1',
+    href: '/app-dev-class-note/Session-01',
     description:
       'This class is about using Swift language fundamentals together to solve a realistic data-processing problem.',
     date: 'Jan 12, 2026',
@@ -13,7 +13,7 @@ const posts = [
   {
     id: 2,
     title: 'Swift Fundamentals — Session 2',
-    href: '/Session-02',
+    href: '/app-dev-class-note/Session-02',
     description: 'Today’s focus: Arrays, Dictionaries, Loop patterns, and Tuples — the tools you use to store and process real data (like server logs).',
     date: 'Jan 13, 2026',
     datetime: '2020-03-10',
@@ -22,7 +22,7 @@ const posts = [
   {
     id: 3,
     title: 'Swift Fundamentals — Session 3',
-    href: '/Session-03',
+    href: '/app-dev-class-note/Session-03',
     description:
       'Today’s focus: switch, enums, and functions — the tools that power app logic and clean decision-making.',
     date: 'Jan 14, 2026',
@@ -32,7 +32,7 @@ const posts = [
   {
     id: 4,
     title: 'Swift Fundamentals — Session 4',
-    href: '/Session-04',
+    href: '/app-dev-class-note/Session-04',
     description:
       'Today’s focus: Optionals + Closures + advanced Functions patterns (passing, returning, and escaping).',
     date: 'Jan 15, 2026',
@@ -42,7 +42,7 @@ const posts = [
   {
     id: 5,
     title: 'Swift Fundamentals — Session: Structs & Classes',
-    href: '/Session-05',
+    href: '/app-dev-class-note/Session-05',
     description:
       'This session teaches the most important “app dev” idea: Structs copy (value type) while Classes share (reference type). We also practice properties, initializers, and optionals.',
     date: 'Jan 16, 2026',
@@ -52,7 +52,7 @@ const posts = [
   {
     id: 6,
     title: 'Swift Fundamentals — Session 6',
-    href: '/Session-06',
+    href: '/app-dev-class-note/Session-06',
     description:
       'Focus: Methods + Mutating + Inheritance olymorphism. You learn how Swift objects “do actions”, and how child classes extend parent classes.',
     date: 'Jan 19, 2026',
@@ -62,7 +62,7 @@ const posts = [
       {
     id: 7,
     title: 'Swift Fundamentals — Session 8',
-    href: '/Session-08',
+    href: '/app-dev-class-note/Session-08',
     description:
       'Topic combo: Error Handling + Access Control. Learn how Swift lets you: 1. detect failures safely, 2. protect sensitive data.',
     date: 'Jan 21, 2026',
@@ -72,7 +72,7 @@ const posts = [
     {
     id: 8,
     title: 'Swift Fundamentals — Session 9',
-    href: '/Session-09',
+    href: '/app-dev-class-note/Session-09',
     description:
       'Today’s “power combo”: Optional Chaining + Concurrency (async/await) + OOP Game Design.',
     date: 'Jan 22, 2026',
