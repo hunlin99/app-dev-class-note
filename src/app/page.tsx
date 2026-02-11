@@ -2,82 +2,132 @@ import Image from "next/image";
 const posts = [
   {
     id: 1,
-    title: 'Swift Fundamentals — Session 1',
+    title: 'Swift Basics and Language Fundamentals — Session 1',
     href: '/app-dev-class-note/Session-01',
     description:
       'This class is about using Swift language fundamentals together to solve a realistic data-processing problem.',
     date: 'Jan 12, 2026',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
   {
     id: 2,
-    title: 'Swift Fundamentals — Session 2',
+    title: 'Working with Collections — Session 2',
     href: '/app-dev-class-note/Session-02',
     description: 'Today’s focus: Arrays, Dictionaries, Loop patterns, and Tuples — the tools you use to store and process real data (like server logs).',
     date: 'Jan 13, 2026',
     datetime: '2020-03-10',
-    category: { title: 'Sales', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
   {
     id: 3,
-    title: 'Swift Fundamentals — Session 3',
+    title: 'Functions and Parameters — Session 3',
     href: '/app-dev-class-note/Session-03',
     description:
       'Today’s focus: switch, enums, and functions — the tools that power app logic and clean decision-making.',
     date: 'Jan 14, 2026',
     datetime: '2020-02-12',
-    category: { title: 'Business', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
   {
     id: 4,
-    title: 'Swift Fundamentals — Session 4',
+    title: 'Optionals and Safe Unwrapping — Session 4',
     href: '/app-dev-class-note/Session-04',
     description:
       'Today’s focus: Optionals + Closures + advanced Functions patterns (passing, returning, and escaping).',
     date: 'Jan 15, 2026',
     datetime: '2020-02-12',
-    category: { title: 'Business', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
   {
     id: 5,
-    title: 'Swift Fundamentals — Session: Structs & Classes',
+    title: 'Structs and Value Types — Session: Structs & Classes',
     href: '/app-dev-class-note/Session-05',
     description:
       'This session teaches the most important “app dev” idea: Structs copy (value type) while Classes share (reference type). We also practice properties, initializers, and optionals.',
     date: 'Jan 16, 2026',
     datetime: '2020-02-13',
-    category: { title: 'Business', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
   {
     id: 6,
-    title: 'Swift Fundamentals — Session 6',
+    title: 'Classes and Reference Types — Session 6',
     href: '/app-dev-class-note/Session-06',
     description:
       'Focus: Methods + Mutating + Inheritance olymorphism. You learn how Swift objects “do actions”, and how child classes extend parent classes.',
     date: 'Jan 19, 2026',
     datetime: '2020-02-13',
-    category: { title: 'Business', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
       {
     id: 7,
-    title: 'Swift Fundamentals — Session 8',
+    title: 'Protocols and Extensions — Session 8',
     href: '/app-dev-class-note/Session-08',
     description:
       'Topic combo: Error Handling + Access Control. Learn how Swift lets you: 1. detect failures safely, 2. protect sensitive data.',
     date: 'Jan 21, 2026',
     datetime: '2020-02-13',
-    category: { title: 'Business', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
   },
     {
     id: 8,
-    title: 'Swift Fundamentals — Session 9',
+    title: 'Methods, Mutability, and Type Properties — Session 9',
     href: '/app-dev-class-note/Session-09',
     description:
       'Today’s “power combo”: Optional Chaining + Concurrency (async/await) + OOP Game Design.',
     date: 'Jan 22, 2026',
     datetime: '2020-02-13',
-    category: { title: 'Business', href: '#' },
+    category: { title: 'Swift Fundamentals', href: '#' },
+  },
+  {
+    id: 9,
+    title: 'State & basic UI — Session 1',
+    href: '/app-dev-class-note/ios-development/session-01',
+    description:
+      'understand how SwiftUI updates UI automatically based on state.',
+    date: 'Feb 2, 2026',
+    datetime: '2020-02-13',
+    category: { title: 'iOS Development', href: '#' },
+  },
+  {
+    id: 10,
+    title: 'Forms & validation — Session 2',
+    href: '/app-dev-class-note/ios-development/session-01',
+    description:
+      'understand how SwiftUI updates UI automatically based on state.',
+    date: 'Feb 3, 2026',
+    datetime: '2020-02-13',
+    category: { title: 'iOS Development', href: '#' },
+  },
+  {
+    id: 11,
+    title: 'Layout & grids — Session 3',
+    href: '/app-dev-class-note/ios-development/session-01',
+    description:
+      'understand how SwiftUI updates UI automatically based on state.',
+    date: 'Feb 4, 2026',
+    datetime: '2020-02-13',
+    category: { title: 'iOS Development', href: '#' },
+  },
+  {
+    id: 12,
+    title: 'Navigation & interactive controls — Session 4',
+    href: '/app-dev-class-note/ios-development/session-01',
+    description:
+      'understand how SwiftUI updates UI automatically based on state.',
+    date: 'Feb 4, 2026',
+    datetime: '2020-02-13',
+    category: { title: 'iOS Development', href: '#' },
+  },
+  {
+    id: 13,
+    title: 'Lists & Dynamic Data — Session 5',
+    href: '/app-dev-class-note/ios-development/session-01',
+    description:
+      'understand how SwiftUI updates UI automatically based on state.',
+    date: 'Feb 4, 2026',
+    datetime: '2020-02-13',
+    category: { title: 'iOS Development', href: '#' },
   },
 ]
 
@@ -96,12 +146,12 @@ export default function Example() {
                 <time dateTime={post.datetime} className="text-gray-500">
                   {post.date}
                 </time>
-                {/* <a
+                <a
                   href={post.category.href}
                   className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                 >
                   {post.category.title}
-                </a> */}
+                </a>
               </div>
               <div className="group relative grow">
                 <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
@@ -112,18 +162,6 @@ export default function Example() {
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">{post.description}</p>
               </div>
-              {/* <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
-                <img alt="" src={post.author.imageUrl} className="size-10 rounded-full bg-gray-50" />
-                <div className="text-sm/6">
-                  <p className="font-semibold text-gray-900">
-                    <a href={post.author.href}>
-                      <span className="absolute inset-0" />
-                      {post.author.name}
-                    </a>
-                  </p>
-                  <p className="text-gray-600">{post.author.role}</p>
-                </div>
-              </div> */}
             </article>
           ))}
         </div>

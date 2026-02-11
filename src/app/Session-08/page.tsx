@@ -11,7 +11,6 @@ const links = [
   { name: 'Access Control: private / internal / fileprivate', href: '#access' },
   { name: 'Patient + SIN Example', href: '#patient' },
   { name: 'Common Beginner Mistakes', href: '#mistakes' },
-  { name: 'Mini Quiz + Answers', href: '#quiz' },
 ]
 
 function CodeBlock({ children }: { children: string }) {
@@ -77,12 +76,7 @@ export default function Example() {
             <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
               Swift Fundamentals — Session 8
             </h2>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
-              Topic combo: <b>Error Handling</b> + <b>Access Control</b> 🔐💥
-              <br />
-              Learn how Swift lets you: 1. detect failures safely, 2. protect sensitive data.
-            </p>
-
+            
             <div className="mt-6 flex flex-wrap gap-2 text-gray-900/90">
               <Badge>enum Error</Badge>
               <Badge>throws</Badge>
@@ -420,38 +414,6 @@ print(patient.accessSIN()) // invalid -> stored as 000000000 -> XXX-XXX-000`}</C
           <Tip title="If your app 'cannot see' a function... 👀">
             <p>
               Check the access level first: is it <code>private</code> or <code>fileprivate</code>?
-            </p>
-          </Tip>
-        </div>
-
-        {/* QUIZ */}
-        <div id="quiz" className="mt-12 pb-10">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Mini Quiz + Answers ✅</h2>
-
-          <ol className="list-decimal px-5 mt-3 space-y-3">
-            <li>
-              <b>Q:</b> Why must you write <code>try</code> before calling <code>vend()</code>? <br />
-              <b>A:</b> Because <code>vend()</code> is marked <code>throws</code>, so Swift forces you to acknowledge it can fail.
-            </li>
-            <li>
-              <b>Q:</b> What’s the benefit of <code>VendingError.insufficientFunds(coinsNeeded:)</code>? <br />
-              <b>A:</b> It carries the exact missing amount so your error message can tell the user how many coins to add.
-            </li>
-            <li>
-              <b>Q:</b> Why is <code>SIN</code> marked <code>private</code>? <br />
-              <b>A:</b> To prevent other files/classes from reading the full SIN directly (data protection).
-            </li>
-            <li>
-              <b>Q:</b> Why is <code>validateSIN()</code> <code>fileprivate</code>? <br />
-              <b>A:</b> So only Patient.swift can use that helper function — it can’t be called from other files.
-            </li>
-          </ol>
-
-          <Tip title="Quick self-check 🧠">
-            <p>
-              If you can explain this sentence, you mastered Session 8:
-              <br />
-              “A throwing function uses <code>throw</code> to report failure, and callers use <code>try</code> + <code>do-catch</code> to handle it.”
             </p>
           </Tip>
         </div>

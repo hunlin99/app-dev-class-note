@@ -11,7 +11,7 @@ const links = [
   { name: 'Initializers in Class (User)', href: '#user' },
   { name: 'Mutating (Struct) vs Normal Methods', href: '#mutating' },
   { name: 'Failable init? + Optional binding', href: '#failable' },
-  { name: 'Key Takeaways + Mini Quiz', href: '#takeaways' },
+  { name: 'Key Takeaways', href: '#takeaways' },
 ]
 
 function CodeBlock({ children }: { children: string }) {
@@ -37,6 +37,14 @@ function Tip({
   )
 }
 
+function Badge({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center rounded-full border bg-white px-2 py-1 text-xs font-semibold">
+      {children}
+    </span>
+  )
+}
+
 export default function Example() {
   return (
     <main>
@@ -49,18 +57,21 @@ export default function Example() {
         />
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <BackBtn/>
+          <BackBtn />
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-              Swift Fundamentals — Session: Structs & Classes
+              Swift Fundamentals — Session 5
             </h2>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
-              This session teaches the most important “app dev” idea: <b>Structs copy</b> (value type) while{' '}
-              <b>Classes share</b> (reference type). We also practice <b>properties</b>, <b>initializers</b>, and{' '}
-              <b>optionals</b>.
-            </p>
           </div>
 
+          <div className="mt-6 flex flex-wrap gap-2 text-gray-900/90">
+            <Badge>structs</Badge>
+            <Badge>properties</Badge>
+            <Badge>methods</Badge>
+            <Badge>value types</Badge>
+            <Badge>mutating methods</Badge>
+            <Badge>initializers</Badge>
+          </div>
           {/* NAV */}
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex md:flex-wrap lg:gap-x-6">
@@ -259,7 +270,7 @@ if(hdVideo3 === hdVideo2) {
 
           <Tip title="Quick definition">
             <p>
-              <b>===</b> means “same object in memory” (identity).  
+              <b>===</b> means “same object in memory” (identity).
               <b>==</b> means “same value” (equality), if your type supports it.
             </p>
           </Tip>
@@ -396,7 +407,7 @@ if let user3 {
 
           <Tip title="What’s happening?">
             <p>
-              Because <code>init?</code> can return nil, <code>user3</code> is an Optional.  
+              Because <code>init?</code> can return nil, <code>user3</code> is an Optional.
               <code>if let</code> safely checks whether it exists before using it.
             </p>
           </Tip>
@@ -404,7 +415,7 @@ if let user3 {
 
         {/* TAKEAWAYS */}
         <div id="takeaways" className="mt-12 pb-10">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Key Takeaways + Mini Quiz</h2>
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Key Takeaways</h2>
 
           <ul className="list-disc px-5 mt-3 space-y-2">
             <li>
@@ -423,20 +434,6 @@ if let user3 {
               <b>init?</b> can fail and return <code>nil</code> → use <code>if let</code> to unwrap safely.
             </li>
           </ul>
-
-          <Tip title="Mini Quiz (check yourself ✅)">
-            <ol className="list-decimal px-5 space-y-2">
-              <li>
-                If you do <code>var b = a</code> where <code>a</code> is a struct, is <code>b</code> a copy or shared?
-              </li>
-              <li>
-                Why does <code>hdVideo3.frameRate</code> change when you modify <code>hdVideo2.frameRate</code>?
-              </li>
-              <li>
-                What does <code>init?</code> mean, and why do we need <code>if let</code> after using it?
-              </li>
-            </ol>
-          </Tip>
         </div>
       </section>
     </main>

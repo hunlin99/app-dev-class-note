@@ -14,7 +14,7 @@ const links = [
   { name: 'OOP Game Part: Entity/Character/Enemy', href: '#oop-1' },
   { name: 'Game App Part: Enums + Items + Failable Init', href: '#oop-2' },
   { name: 'Common Beginner Mistakes', href: '#mistakes' },
-  { name: 'Key Takeaways + Mini Quiz', href: '#takeaways' },
+  { name: 'Key Takeaways', href: '#takeaways' },
 ]
 
 function CodeBlock({ children }: { children: string }) {
@@ -65,13 +65,6 @@ export default function Example() {
             <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
               Swift Fundamentals — Session 9
             </h2>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
-              Today’s “power combo”: <b>Optional Chaining</b> + <b>Concurrency (async/await)</b> + <b>OOP Game Design</b>.
-              <br />
-              <span className="text-gray-300">
-                Goal: write safer Swift (no crashes) and faster Swift (do tasks concurrently).
-              </span>
-            </p>
 
             <div className="mt-6 flex flex-wrap gap-2 text-gray-900/90">
               <Badge>Optional chaining</Badge>
@@ -593,7 +586,7 @@ enum ItemType { case weapon, key, potion }`}</CodeBlock>
 
         {/* TAKEAWAYS */}
         <div id="takeaways" className="mt-12 pb-10">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Key Takeaways + Mini Quiz</h2>
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Key Takeaways</h2>
 
           <ul className="list-disc px-5 mt-3 space-y-2">
             <li>
@@ -612,26 +605,6 @@ enum ItemType { case weapon, key, potion }`}</CodeBlock>
               OOP game code shows inheritance + shared rules (base class) + specialized behavior (subclass).
             </li>
           </ul>
-
-          <Tip title="Mini Quiz ✅ (answer in 1 sentence each)">
-            <ol className="list-decimal px-5 space-y-2">
-              <li>
-                What does <code>parent.child?.toy</code> return if <code>child</code> is nil?
-              </li>
-              <li>
-                Why is <code>p1.residence?.numberOfRooms</code> an <code>Int?</code> not an <code>Int</code>?
-              </li>
-              <li>
-                What is the difference between sequential awaits vs <code>async let</code>?
-              </li>
-              <li>
-                What does <code>init?</code> mean in the Character class?
-              </li>
-              <li>
-                Why do subclasses often call <code>super.init</code>?
-              </li>
-            </ol>
-          </Tip>
         </div>
       </section>
     </main>

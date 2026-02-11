@@ -13,7 +13,6 @@ const links = [
   { name: 'Polymorphism (Compile-time)', href: '#compile-poly' },
   { name: 'Operator Overloading (+, *)', href: '#operator' },
   { name: 'Common Beginner Mistakes', href: '#mistakes' },
-  { name: 'Mini Quiz + Answers', href: '#quiz' },
 ]
 
 function CodeBlock({ children }: { children: string }) {
@@ -79,23 +78,14 @@ export default function Example() {
             <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
               Swift Fundamentals — Session 6
             </h2>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
-              Focus: <b>Methods</b> + <b>Mutating</b> + <b>Inheritance</b> + <b>Polymorphism</b> 🧠⚙️🚗🐶
-              <br />
-              You learn how Swift objects “do actions”, and how child classes extend parent classes.
-            </p>
 
             <div className="mt-6 flex flex-wrap gap-2 text-gray-900/90">
-              <Badge>instance method</Badge>
-              <Badge>mutating</Badge>
-              <Badge>static</Badge>
-              <Badge>class</Badge>
-              <Badge>inheritance</Badge>
-              <Badge>override</Badge>
-              <Badge>super</Badge>
-              <Badge>polymorphism</Badge>
-              <Badge>overloading</Badge>
-              <Badge>operator overloading</Badge>
+              <Badge>classes</Badge>
+            <Badge>reference types</Badge>
+            <Badge>inheritance</Badge>
+            <Badge>overriding</Badge>
+            <Badge>identity vs equality</Badge>
+            <Badge>deinitializers</Badge>
             </div>
           </div>
 
@@ -404,29 +394,6 @@ func addNumbers(a: Double, b: Double) -> Double { a + b }`}</CodeBlock>
           </ul>
         </div>
 
-        {/* QUIZ */}
-        <div id="quiz" className="mt-12 pb-10">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Mini Quiz + Answers ✅</h2>
-
-          <ol className="list-decimal px-5 mt-3 space-y-3">
-            <li>
-              <b>Q:</b> Why doesn’t a class method need <code>mutating</code>? <br />
-              <b>A:</b> Class is a reference type; it can update properties directly.
-            </li>
-            <li>
-              <b>Q:</b> Why does a struct method need <code>mutating</code> to change <code>x</code>/<code>y</code>? <br />
-              <b>A:</b> Struct is a value type; Swift requires explicit permission to modify self.
-            </li>
-            <li>
-              <b>Q:</b> What’s the difference between <code>override</code> and <code>overload</code>? <br />
-              <b>A:</b> Override = child replaces parent method; Overload = same name, different parameter types.
-            </li>
-            <li>
-              <b>Q:</b> What is polymorphism in the Animal example? <br />
-              <b>A:</b> Same method name <code>makeSound()</code>, different behavior depending on actual object (Cat/Dog).
-            </li>
-          </ol>
-        </div>
       </section>
     </main>
   )
